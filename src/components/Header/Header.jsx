@@ -5,7 +5,6 @@ import {
   FaFacebookF,
   FaGooglePlusG,
   FaLinkedinIn,
-  FaHandsHelping,
   FaLock,
 } from "react-icons/fa";
 import { MdArrowDropDown } from "react-icons/md";
@@ -51,7 +50,7 @@ const Header = () => {
       <section className="bg-white  flex items-center justify-between">
         <div className="flex items-center">
           {/* <RiMenu5Fill className="text-3xl font-semibold text-blue-800" /> */}
-          <div className="text-sm  py-3 pl-3 pr-3 bg-gray-50  font-serif text-black ">
+          <div className="text-sm  py-3 pl-3 pr-6 bg-gray-50  font-serif text-black ">
             <h1 className="font-serif text-lg">3:15 PM</h1>
             <h1 className="">Tuesday, May 21, 2024 (GMT+6) </h1>
           </div>
