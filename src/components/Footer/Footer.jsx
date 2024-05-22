@@ -30,8 +30,8 @@ const Footer = () => {
           {/* Column 3: Contact & Social Media */}
           <div>
             <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
-            <p className="text-gray-600 mb-2">Email: contact@company.com</p>
-            <p className="text-gray-600 mb-2">Phone: +123 456 7890</p>
+            <p className="text-gray-600 mb-2">Email: mask.shakill@gmail.com</p>
+            <p className="text-gray-600 mb-2">Phone: 01623023732</p>
             <div className="flex space-x-4 mt-4">
               <a
                 href="https://facebook.com"
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 border-t border-gray-300 pt-4 text-center">
           <p className="text-gray-600">
-            &copy; 2024 ( Shakil | Fazlay | Tuhin ). All rights reserved.
+            &copy; 2024 (Shahariar Kobir Shakil). All rights reserved.
           </p>
         </div>
       </div>
