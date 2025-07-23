@@ -5,7 +5,7 @@ if (!process.env.GEMINI_API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const TIME_PER_QUESTION = 30; // 30 seconds per question
+const TIME_PER_QUESTION = 30;
 const INPUT_MAX_QUESTIONS = 30;
 
 function parseGeminiResponse(text) {
@@ -25,7 +25,7 @@ async function generateQuiz({ topic, numQuestions, language }) {
     throw new Error(`Number of questions must be 1-${INPUT_MAX_QUESTIONS}`);
   }
 
-  const startTime = Date.now(); // Start timing the operation
+  const startTime = Date.now();
   const timeLimit = numQuestions * TIME_PER_QUESTION;
 
   const model = genAI.getGenerativeModel({
@@ -79,13 +79,13 @@ async function generateQuiz({ topic, numQuestions, language }) {
     }
 
     const endTime = Date.now();
-    const processingTime = Math.floor((endTime - startTime) / 1000); // in seconds
+    const processingTime = Math.floor((endTime - startTime) / 1000);
 
     return {
       ...quiz,
-      timeLimit, // Total time limit for the quiz
-      timePerQuestion: TIME_PER_QUESTION, // Time per individual question
-      processingTime, // Actual time taken to generate the quiz
+      timeLimit,
+      timePerQuestion: TIME_PER_QUESTION,
+      processingTime,
       totalQuestions: numQuestions,
       serverMessage: `You have ${timeLimit} seconds total (${TIME_PER_QUESTION}s per question) to complete the quiz`,
     };
