@@ -28,6 +28,11 @@ app.use(
   swaggerUi.serve,
   swaggerUi.setup(swaggerJsdoc(swaggerOptions))
 );
+app.get("/", (req, res) => {
+  res.send(
+    "Welcome to the MCQ Quiz Generator API. Visit /api-docs for documentation."
+  );
+});
 app.use(routes);
 
 const PORT = process.env.PORT || 3000;
